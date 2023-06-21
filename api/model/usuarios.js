@@ -5,7 +5,7 @@ exports.getUsuario = (email,senha) => {
     return database.query(query);
 }
 
-exports.postUsuario0 = (c) => {
+exports.postCliente = (c) => {
     const query = (
         "INSERT INTO USUARIO(EMAIL,NOME,SENHA,SALDO,TIPO) VALUES"+
         `('${c.email}','${c.nome}','${c.senha}','0','0')`

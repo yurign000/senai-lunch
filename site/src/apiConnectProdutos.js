@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export async function getProdutos(){
-    const url = 'http://localhost:3000/senai-lunch/listar-produtos';
+export async function pegarProdutos(){
+    const url = 'http://localhost:3000/senai-lunch/pegar-produtos';
     let data;
 
     await axios.get(url)
@@ -11,7 +11,7 @@ export async function getProdutos(){
     return data;
 }
 
-export async function postProduto(produto){
+export async function criarProduto(produto){
     const url = 'http://localhost:3000/senai-lunch/post-produto';
     let data;
 
@@ -22,7 +22,7 @@ export async function postProduto(produto){
     return data;
 }
 
-export async function putProduto(id,estoque){
+export async function atualizarProduto(id,estoque){
     const url = 'http://localhost:3000/senai-lunch/put-produto/'+id;
     let data;
 
@@ -33,7 +33,7 @@ export async function putProduto(id,estoque){
     return data;
 }
 
-export async function deleteProduto(id){
+export async function deletarProduto(id){
     const url = 'http://localhost:3000/senai-lunch/delete-produto/'+id;
     let data;
 

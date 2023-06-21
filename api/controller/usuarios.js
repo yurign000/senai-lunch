@@ -10,7 +10,7 @@ exports.getUsuario = (req,res) => {
     );
 };
 
-exports.postUsuario0 = (req,res) => {
+exports.postCliente = (req,res) => {
     const email = req.body.email;
     const senha = req.body.senha;
 
@@ -35,7 +35,7 @@ exports.putCodigoPedido = (req,res) => {
     const codigo = req.body.codigo;
 
     model.putCodigoPedido(email,codigo).then(
-        ()         => res.status(200).send("Codigo pedido atualizado"),
-        (error)    => res.status(404).send({'Erro':error}) 
+        ()         => res.status(200).send('Valido'),
+        (error)    => res.status(404).send('Invalido') 
     );
 };
